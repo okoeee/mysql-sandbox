@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.1.0
+    platform: linux/amd64
+    container_name: mysql-sandbox
+    ports:
+      - "43306:3306"
+    environment:
+      MYSQL_USER: admin
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: sandbox
+      TZ: "Asia/Tokyo"
